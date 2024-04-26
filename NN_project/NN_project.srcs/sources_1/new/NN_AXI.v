@@ -125,7 +125,7 @@ module NN_AXI #
         .config_layer_num(config_layer_num),
         .config_neuron_num(config_neuron_num),
         .outNN(outNN),
-        .outNNValid(outNNValid) 
+        .outNNValid(outNNValid)
     );
     
     localparam numOfNeuronHiddenLayer1 = 4;
@@ -133,7 +133,7 @@ module NN_AXI #
     localparam numOfNeuronOutputLayer = 2;
     
     
-    hidden_layer_1 #(.numOfNeuron(numOfNeuronHiddenLayer1),.layerNo(0),.numOfWeight(32),.dataWidth(dataWidth),.weightIntWidth(weightIntWidth),.actType("relu")) 
+    hidden_layer_1 #(.numOfNeuron(numOfNeuronHiddenLayer1),.layerNo(0),.numOfWeight(13),.dataWidth(dataWidth),.weightIntWidth(weightIntWidth),.actType("relu")) 
     hl1 (
         .clk(clk),
         .rst(rst),

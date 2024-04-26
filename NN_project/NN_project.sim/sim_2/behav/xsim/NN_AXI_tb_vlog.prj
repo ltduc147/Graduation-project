@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../NN_project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../NN_project.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "D:/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
+verilog xil_defaultlib  --include "../../../../NN_project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../NN_project.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "../../../../NN_project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../NN_project.gen/sources_1/bd/design_1/ipshared/35de/hdl/verilog" --include "D:/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
 "../../../../NN_project.srcs/sources_1/new/NN_AXI.v" \
 "../../../../NN_project.srcs/sources_1/new/S_AXI.v" \
 "../../../../NN_project.srcs/sources_1/new/findOutputMax.v" \

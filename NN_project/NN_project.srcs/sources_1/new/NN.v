@@ -44,7 +44,7 @@ module NN #(parameter dataWidth=32,weightIntWidth=16,actType="relu")(
     localparam numOfNeuronHiddenLayer2 = 4;
     localparam numOfNeuronOutputLayer = 2;
     
-    hidden_layer_1 #(.numOfNeuron(numOfNeuronHiddenLayer1),.layerNo(0),.numOfWeight(32),.dataWidth(dataWidth),.weightIntWidth(weightIntWidth),.actType("relu")) 
+    hidden_layer_1 #(.numOfNeuron(numOfNeuronHiddenLayer1),.layerNo(0),.numOfWeight(13),.dataWidth(dataWidth),.weightIntWidth(weightIntWidth),.actType("relu")) 
     hl1 (
         .clk(clk),
         .rst(rst),

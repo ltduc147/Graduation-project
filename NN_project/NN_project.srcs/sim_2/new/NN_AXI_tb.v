@@ -102,7 +102,7 @@ module NN_AXI_tb;
    assign numofNeurons[1] = 4;
    assign numofNeurons[2] = 2;
     
-   assign numofWeights[0] = 32;
+   assign numofWeights[0] = 13;
    assign numofWeights[1] = 4;
    assign numofWeights[2] = 4;
    
@@ -242,7 +242,7 @@ module NN_AXI_tb;
            
            $display("file Name: %s", fileName);
            $readmemb(fileName, inputTest);
-           for (i=0; i < 32; i = i+1) begin
+           for (i=0; i < 13; i = i+1) begin
                 @(posedge S_AXI_ACLK);
                 S_AXIS_TDATA <= inputTest[i];
                 S_AXIS_TVALID <= 1;

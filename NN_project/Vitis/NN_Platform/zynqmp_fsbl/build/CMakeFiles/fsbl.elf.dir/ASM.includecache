@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Graduation_Project/NN_project/Vitis/NN_Platform/zynqmp_fsbl/xfsbl_exit.S
+
+D:/Graduation_Project/NN_project/Vitis/NN_Platform/zynqmp_fsbl/xfsbl_translation_table_a53_64.S
+xparameters.h
+D:/Graduation_Project/NN_project/Vitis/NN_Platform/zynqmp_fsbl/xparameters.h
+xparameters.h
+D:/Graduation_Project/NN_project/Vitis/NN_Platform/zynqmp_fsbl/xparameters.h
+

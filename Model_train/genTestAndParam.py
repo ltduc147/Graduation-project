@@ -19,7 +19,7 @@ def floatTofixed(floatNum, dataWidth, fracBits):
 
 
 def param_generator():
-  f = open("param.json", "r")
+  f = open("param-88-91.json", "r")
   param = json.loads(f.read())
   
   for layerNo in range(len(param["size"])):
@@ -35,29 +35,15 @@ def param_generator():
       f.close()
   pass
 
-param_generator()
+#param_generator()
 
 def genTestCase():
-  np.random.seed(43)
+  selected_feature = ['sttl', 'dttl', 'dloss',  'sinpkt', 'dinpkt', 'synack', 'ackdat', 'smean', 'dmean', 'trans_depth', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_flw_http_mthd']
+  testing_set = './Dataset/UNSW_NB15_testing-set.csv'
+  test = pd.read_csv(testing_set)
+  X_test = test[selected_feature].values
+  Y_test = test['label'].values
 
-  # Set random seed for TensorFlow
-  tf.random.set_seed(43)
-
-  dataset_path = "./Dataset/UNSW_NB15_training-set.csv"
-  df = pd.read_csv(dataset_path)
-
-  to_drop = ['sloss', 'dloss', 'dpkts', 'dwin', 'ct_srv_dst', 'ct_src_dport_ltm', 'ct_dst_src_ltm', 'attack_cat', 'id', 'proto', 'service', 'state']
-
-  df.drop(columns=to_drop, inplace=True)
-
-  X = df[df.columns.drop('label')].values
-  Y = df['label'].values
-
-  X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
-
-  scaler = StandardScaler()
-  X_train = scaler.fit_transform(X_train)
-  X_test = scaler.transform(X_test)
 
   for i in range(10000):
     testcase = X_test[i]
@@ -69,4 +55,4 @@ def genTestCase():
     f.close()
   pass
 
-#genTestCase()
+genTestCase()
