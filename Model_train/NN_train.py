@@ -4,12 +4,14 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
+from keras import layers, optimizers
 
 
-dataset_path = "./Dataset/UNSW_NB15_training-set.csv"
+
+dataset_path = "./Dataset/UNSW_NB15_testing-set.csv"
 df = pd.read_csv(dataset_path)
 
-selected_feature = ['sttl', 'dttl', 'dloss',  'sinpkt', 'dinpkt', 'synack', 'ackdat', 'smean', 'dmean', 'trans_depth', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_flw_http_mthd']
+selected_feature = ['sttl', 'dttl', 'dloss',  'sinpkt', 'dinpkt', 'synack', 'ackdat', 'smean', 'dmean', 'trans_depth']
 X_feature = df[selected_feature]
 Y_feature = df['label']
 
@@ -23,22 +25,25 @@ Y_train = Y_feature.values
 def training():
 
     model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=(13,)),
+        tf.keras.layers.Input(shape=(10,)),
         tf.keras.layers.Dense(4, activation='relu'),
-        tf.keras.layers.Dense(1, activation='relu')
+        tf.keras.layers.Dense(1, activation='sigmoid')
     ])
     
-    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])  # Using mean squared error loss for regression
+    custom_optimizer = optimizers.Adam(learning_rate=0.001)
+    
+    model.compile(optimizer=custom_optimizer, loss='mse', metrics=['accuracy']) 
 
     model.fit(X_train, Y_train, epochs=20, batch_size=32, validation_split=0.25)
     
-    testing_set = './Dataset/UNSW_NB15_testing-set.csv'
+    testing_set = './Dataset/UNSW_NB15_training-set.csv'
     test = pd.read_csv(testing_set)
     X_test = test[selected_feature].values
     Y_test = test['label'].values
+    print(Y_test)
     Y_PRED = model.predict(X_test)
     #accuracy = accuracy_score(Y_test, np.argmax(Y_PRED, axis=1))
-    binary_predictions = [1 if prob >= 0.5 else 0 for prob in Y_PRED]
+    binary_predictions = [1 if prob > 0.5 else 0 for prob in Y_PRED]
     accuracy = accuracy_score(Y_test, binary_predictions)
     print(f"Test Accuracy: {accuracy}")
     
@@ -63,7 +68,6 @@ def training():
         param["bias"].append(bias)
         print("\n")
     
-    pass
     with open("param.json", "w") as param_file:
         param_file.write(str(param).replace("'", '"'))
 

@@ -1,0 +1,1093 @@
+
+*** Running vivado
+    with args -log design_1_NN_AXI_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_NN_AXI_0_1.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_NN_AXI_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 490.859 ; gain = 178.223
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_NN_AXI_0_1
+Command: synth_design -top design_1_NN_AXI_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6668
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1369.113 ; gain = 439.293
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'outLayer1', assumed default net type 'wire' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:151]
+INFO: [Synth 8-11241] undeclared symbol 'outLayer1Valid', assumed default net type 'wire' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:152]
+WARNING: [Synth 8-8895] 'outLayer1' is already implicitly declared on line 151 [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:155]
+WARNING: [Synth 8-8895] 'outLayer1Valid' is already implicitly declared on line 152 [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:157]
+INFO: [Synth 8-11241] undeclared symbol 'outLayer2', assumed default net type 'wire' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:208]
+INFO: [Synth 8-11241] undeclared symbol 'outLayer2Valid', assumed default net type 'wire' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:209]
+WARNING: [Synth 8-8895] 'outLayer2' is already implicitly declared on line 208 [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:212]
+WARNING: [Synth 8-8895] 'outLayer2Valid' is already implicitly declared on line 209 [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:214]
+INFO: [Synth 8-11241] undeclared symbol 'outLayer3', assumed default net type 'wire' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:264]
+INFO: [Synth 8-11241] undeclared symbol 'outLayer3Valid', assumed default net type 'wire' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:265]
+WARNING: [Synth 8-8895] 'outLayer3' is already implicitly declared on line 264 [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:268]
+WARNING: [Synth 8-8895] 'outLayer3Valid' is already implicitly declared on line 265 [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:270]
+INFO: [Synth 8-6157] synthesizing module 'design_1_NN_AXI_0_1' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_NN_AXI_0_1/synth/design_1_NN_AXI_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'NN_AXI' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:23]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'S_AXI' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/S_AXI.v:22]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'S_AXI' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/S_AXI.v:22]
+INFO: [Synth 8-6157] synthesizing module 'hidden_layer_1' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/hidden_layer_1.v:23]
+	Parameter numOfNeuron bound to: 4 - type: integer 
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+INFO: [Synth 8-6157] synthesizing module 'neuron' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter neuronNo bound to: 0 - type: integer 
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter neuronNo bound to: 0 - type: integer 
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter addrWidth bound to: 5 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized0' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter neuronNo bound to: 1 - type: integer 
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized0' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter neuronNo bound to: 1 - type: integer 
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter addrWidth bound to: 5 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized0' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized0' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized1' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter neuronNo bound to: 2 - type: integer 
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized1' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter neuronNo bound to: 2 - type: integer 
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter addrWidth bound to: 5 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized1' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized1' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized2' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter neuronNo bound to: 3 - type: integer 
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized2' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 13 - type: integer 
+	Parameter neuronNo bound to: 3 - type: integer 
+	Parameter layerNo bound to: 0 - type: integer 
+	Parameter addrWidth bound to: 5 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized2' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized2' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hidden_layer_1' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/hidden_layer_1.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:172]
+INFO: [Synth 8-6157] synthesizing module 'hidden_layer_2' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/hidden_layer_2.v:23]
+	Parameter numOfNeuron bound to: 4 - type: integer 
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized3' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter neuronNo bound to: 0 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized3' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter neuronNo bound to: 0 - type: integer 
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter addrWidth bound to: 3 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized3' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized3' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized4' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter neuronNo bound to: 1 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized4' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter neuronNo bound to: 1 - type: integer 
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter addrWidth bound to: 3 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized4' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized4' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized5' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter neuronNo bound to: 2 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized5' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter neuronNo bound to: 2 - type: integer 
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter addrWidth bound to: 3 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized5' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized5' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized6' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter neuronNo bound to: 3 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized6' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter neuronNo bound to: 3 - type: integer 
+	Parameter layerNo bound to: 1 - type: integer 
+	Parameter addrWidth bound to: 3 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized6' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized6' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hidden_layer_2' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/hidden_layer_2.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:228]
+INFO: [Synth 8-6157] synthesizing module 'output_layer' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/output_layer.v:22]
+	Parameter numOfNeuron bound to: 2 - type: integer 
+	Parameter layerNo bound to: 2 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized7' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 2 - type: integer 
+	Parameter neuronNo bound to: 0 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized7' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter neuronNo bound to: 0 - type: integer 
+	Parameter layerNo bound to: 2 - type: integer 
+	Parameter addrWidth bound to: 3 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized7' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized7' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized8' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+	Parameter layerNo bound to: 2 - type: integer 
+	Parameter neuronNo bound to: 1 - type: integer 
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightIntWidth bound to: 16 - type: integer 
+	Parameter actType bound to: relu - type: string 
+	Parameter biasFile bound to: (null) - type: string 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized8' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+	Parameter numOfWeight bound to: 4 - type: integer 
+	Parameter neuronNo bound to: 1 - type: integer 
+	Parameter layerNo bound to: 2 - type: integer 
+	Parameter addrWidth bound to: 3 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+	Parameter weightFile bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized8' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized8' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'output_layer' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/output_layer.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:284]
+INFO: [Synth 8-6157] synthesizing module 'findOutputMax' [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/findOutputMax.v:22]
+	Parameter numOfInput bound to: 2 - type: integer 
+	Parameter dataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'findOutputMax' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/findOutputMax.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'NN_AXI' (0#1) [D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_NN_AXI_0_1' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_NN_AXI_0_1/synth/design_1_NN_AXI_0_1.v:53]
+WARNING: [Synth 8-7129] Port waddr[2] in module weight_bram__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module weight_bram__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[2] in module weight_bram__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module weight_bram__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[2] in module weight_bram__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module weight_bram__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[2] in module weight_bram__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module weight_bram__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[2] in module weight_bram__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module weight_bram__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[2] in module weight_bram__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module weight_bram__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[4] in module weight_bram__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[4] in module weight_bram__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[4] in module weight_bram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[4] in module weight_bram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[4] in module weight_bram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[4] in module weight_bram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[4] in module weight_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[4] in module weight_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[31] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[30] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[29] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[28] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[27] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[26] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[25] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[24] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[23] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[22] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[21] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[20] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[19] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[18] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[17] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[16] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[15] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[14] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[13] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[12] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[11] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[10] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[9] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[8] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[7] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[6] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[5] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[4] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[3] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[2] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[1] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[0] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNNValid in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXIS_TREADY in module NN_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1499.625 ; gain = 569.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1499.625 ; gain = 569.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1499.625 ; gain = 569.805
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1499.625 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1598.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1601.297 ; gain = 2.562
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state1_reg' in module 'NN_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state2_reg' in module 'NN_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state3_reg' in module 'NN_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                               00
+               SEND_DATA |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state3_reg' using encoding 'sequential' in module 'NN_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                               00
+               SEND_DATA |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state2_reg' using encoding 'sequential' in module 'NN_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                               00
+               SEND_DATA |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state1_reg' using encoding 'sequential' in module 'NN_AXI'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 20    
+	   2 Input    5 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 12    
++---Registers : 
+	              128 Bit    Registers := 2     
+	               64 Bit    Registers := 31    
+	               32 Bit    Registers := 42    
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 12    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 73    
++---Multipliers : 
+	              32x32  Multipliers := 10    
++---RAMs : 
+	              416 Bit	(13 X 32 bit)          RAMs := 4     
+	              128 Bit	(4 X 32 bit)          RAMs := 6     
++---Muxes : 
+	   4 Input   64 Bit        Muxes := 10    
+	   2 Input   64 Bit        Muxes := 50    
+	   2 Input   32 Bit        Muxes := 11    
+	   2 Input   31 Bit        Muxes := 10    
+	   2 Input    4 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 34    
+	   6 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP neuron_0_0/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: Generating DSP neuron_0_0/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_0_0/WBram/dout_reg is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: register neuron_0_0/mul_reg is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: Generating DSP neuron_0_0/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: register neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul0.
+DSP Report: Generating DSP neuron_0_0/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_0_0/WBram/dout_reg is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: register neuron_0_0/mul_reg is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: register neuron_0_0/mul_reg is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: operator neuron_0_0/mul0 is absorbed into DSP neuron_0_0/mul_reg.
+DSP Report: Generating DSP neuron_0_1/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: Generating DSP neuron_0_1/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_0_1/WBram/dout_reg is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: register neuron_0_1/mul_reg is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: Generating DSP neuron_0_1/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: register neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul0.
+DSP Report: Generating DSP neuron_0_1/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_0_1/WBram/dout_reg is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: register neuron_0_1/mul_reg is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: register neuron_0_1/mul_reg is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: operator neuron_0_1/mul0 is absorbed into DSP neuron_0_1/mul_reg.
+DSP Report: Generating DSP neuron_0_2/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: Generating DSP neuron_0_2/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_0_2/WBram/dout_reg is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: register neuron_0_2/mul_reg is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: Generating DSP neuron_0_2/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: register neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul0.
+DSP Report: Generating DSP neuron_0_2/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_0_2/WBram/dout_reg is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: register neuron_0_2/mul_reg is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: register neuron_0_2/mul_reg is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: operator neuron_0_2/mul0 is absorbed into DSP neuron_0_2/mul_reg.
+DSP Report: Generating DSP neuron_0_3/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: Generating DSP neuron_0_3/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_0_3/WBram/dout_reg is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: register neuron_0_3/mul_reg is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: Generating DSP neuron_0_3/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: register neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul0.
+DSP Report: Generating DSP neuron_0_3/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_0_3/WBram/dout_reg is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: register neuron_0_3/mul_reg is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: register neuron_0_3/mul_reg is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: operator neuron_0_3/mul0 is absorbed into DSP neuron_0_3/mul_reg.
+DSP Report: Generating DSP neuron_1_0/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: Generating DSP neuron_1_0/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_1_0/WBram/dout_reg is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: register neuron_1_0/mul_reg is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: Generating DSP neuron_1_0/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: register neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul0.
+DSP Report: Generating DSP neuron_1_0/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_1_0/WBram/dout_reg is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: register neuron_1_0/mul_reg is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: register neuron_1_0/mul_reg is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: operator neuron_1_0/mul0 is absorbed into DSP neuron_1_0/mul_reg.
+DSP Report: Generating DSP neuron_1_1/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: Generating DSP neuron_1_1/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_1_1/WBram/dout_reg is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: register neuron_1_1/mul_reg is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: Generating DSP neuron_1_1/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: register neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul0.
+DSP Report: Generating DSP neuron_1_1/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_1_1/WBram/dout_reg is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: register neuron_1_1/mul_reg is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: register neuron_1_1/mul_reg is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: operator neuron_1_1/mul0 is absorbed into DSP neuron_1_1/mul_reg.
+DSP Report: Generating DSP neuron_1_2/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: Generating DSP neuron_1_2/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_1_2/WBram/dout_reg is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: register neuron_1_2/mul_reg is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: Generating DSP neuron_1_2/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: register neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul0.
+DSP Report: Generating DSP neuron_1_2/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_1_2/WBram/dout_reg is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: register neuron_1_2/mul_reg is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: register neuron_1_2/mul_reg is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: operator neuron_1_2/mul0 is absorbed into DSP neuron_1_2/mul_reg.
+DSP Report: Generating DSP neuron_1_3/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: Generating DSP neuron_1_3/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_1_3/WBram/dout_reg is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: register neuron_1_3/mul_reg is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: Generating DSP neuron_1_3/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: register neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul0.
+DSP Report: Generating DSP neuron_1_3/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_1_3/WBram/dout_reg is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: register neuron_1_3/mul_reg is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: register neuron_1_3/mul_reg is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: operator neuron_1_3/mul0 is absorbed into DSP neuron_1_3/mul_reg.
+DSP Report: Generating DSP neuron_2_0/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: Generating DSP neuron_2_0/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_2_0/WBram/dout_reg is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: register neuron_2_0/mul_reg is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: Generating DSP neuron_2_0/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: register neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul0.
+DSP Report: Generating DSP neuron_2_0/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_2_0/WBram/dout_reg is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: register neuron_2_0/mul_reg is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: register neuron_2_0/mul_reg is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: operator neuron_2_0/mul0 is absorbed into DSP neuron_2_0/mul_reg.
+DSP Report: Generating DSP neuron_2_1/mul0, operation Mode is: A2*B.
+DSP Report: register neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: Generating DSP neuron_2_1/mul_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register neuron_2_1/WBram/dout_reg is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: register neuron_2_1/mul_reg is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: Generating DSP neuron_2_1/mul0, operation Mode is: A2*B2.
+DSP Report: register neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: register neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul0.
+DSP Report: Generating DSP neuron_2_1/mul_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register neuron_2_1/WBram/dout_reg is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: register neuron_2_1/mul_reg is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: register neuron_2_1/mul_reg is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul_reg.
+DSP Report: operator neuron_2_1/mul0 is absorbed into DSP neuron_2_1/mul_reg.
+WARNING: [Synth 8-7129] Port outNN[31] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[30] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[29] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[28] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[27] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[26] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[25] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[24] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[23] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[22] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[21] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[20] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[19] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[18] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[17] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[16] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[15] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[14] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[13] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[12] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[11] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[10] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[9] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[8] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[7] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[6] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[5] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[4] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[3] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[2] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[1] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNN[0] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outNNValid in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module S_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module S_AXI is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[47]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[46]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[45]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[44]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[43]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[42]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[41]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[40]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[39]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[38]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[37]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[36]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[35]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[34]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[33]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[32]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[31]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[30]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[29]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[28]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[27]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[26]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[25]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[24]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[23]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[22]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[21]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[20]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[19]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[18]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[17]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[47]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[46]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[45]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[44]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[43]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[42]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[41]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[40]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[39]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[38]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[37]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[36]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[35]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[34]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[33]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[32]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[31]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[30]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[29]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[28]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[27]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[26]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[25]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[24]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[23]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[22]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[21]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[20]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[19]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[18]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_0/mul_reg[17]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[47]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[46]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[45]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[44]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[43]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[42]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[41]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[40]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[39]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[38]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[37]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[36]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[35]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[34]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[33]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[32]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[31]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[30]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[29]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[28]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[27]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[26]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[25]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[24]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[23]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[22]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[21]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[20]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[19]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[18]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[17]) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[47]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[46]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[45]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[44]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[43]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[42]__0) is unused and will be removed from module hidden_layer_1.
+WARNING: [Synth 8-3332] Sequential element (neuron_0_1/mul_reg[41]__0) is unused and will be removed from module hidden_layer_1.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+ Sort Area is  neuron_0_0/mul0_0 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_0_0/mul0_0 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_0_1/mul0_6 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_0_1/mul0_6 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_0_2/mul0_8 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_0_2/mul0_8 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_0_3/mul0_a : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_0_3/mul0_a : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_1_0/mul0_c : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_1_0/mul0_c : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_1_1/mul0_e : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_1_1/mul0_e : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_1_2/mul0_10 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_1_2/mul0_10 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_1_3/mul0_12 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_1_3/mul0_12 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_2_0/mul0_14 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_2_0/mul0_14 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_2_1/mul0_16 : 0 0 : 2737 4981 : Used 1 time 0
+ Sort Area is  neuron_2_1/mul0_16 : 0 1 : 2244 4981 : Used 1 time 0
+ Sort Area is  neuron_0_0/mul0_3 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_0_0/mul0_3 : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_0_1/mul0_7 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_0_1/mul0_7 : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_0_2/mul0_9 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_0_2/mul0_9 : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_0_3/mul0_b : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_0_3/mul0_b : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_1_0/mul0_d : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_1_0/mul0_d : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_1_1/mul0_f : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_1_1/mul0_f : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_1_2/mul0_11 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_1_2/mul0_11 : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_1_3/mul0_13 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_1_3/mul0_13 : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_2_0/mul0_15 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_2_0/mul0_15 : 0 1 : 1919 4095 : Used 1 time 0
+ Sort Area is  neuron_2_1/mul0_17 : 0 0 : 2176 4095 : Used 1 time 0
+ Sort Area is  neuron_2_1/mul0_17 : 0 1 : 1919 4095 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object               | Inference | Size (Depth x Width) | Primitives  | 
++------------+--------------------------+-----------+----------------------+-------------+
+|inst/hl1    | neuron_0_0/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl1    | neuron_0_1/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl1    | neuron_0_2/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl1    | neuron_0_3/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl2    | neuron_1_0/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/hl2    | neuron_1_1/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/hl2    | neuron_1_2/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/hl2    | neuron_1_3/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/ol1    | neuron_2_0/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/ol1    | neuron_2_1/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
++------------+--------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hidden_layer_1 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+--------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object               | Inference | Size (Depth x Width) | Primitives  | 
++------------+--------------------------+-----------+----------------------+-------------+
+|inst/hl1    | neuron_0_0/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl1    | neuron_0_1/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl1    | neuron_0_2/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl1    | neuron_0_3/WBram/mem_reg | Implied   | 16 x 32              | RAM32M x 6  | 
+|inst/hl2    | neuron_1_0/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/hl2    | neuron_1_1/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/hl2    | neuron_1_2/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/hl2    | neuron_1_3/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/ol1    | neuron_2_0/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
+|inst/ol1    | neuron_2_1/WBram/mem_reg | Implied   | 4 x 32               | RAM32M x 6  | 
++------------+--------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hidden_layer_1 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_1 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_1 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hidden_layer_2 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hidden_layer_2 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|output_layer   | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|output_layer   | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++---------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   444|
+|2     |DSP48E1  |    40|
+|4     |LUT1     |    12|
+|5     |LUT2     |  2138|
+|6     |LUT3     |    64|
+|7     |LUT4     |   124|
+|8     |LUT5     |   715|
+|9     |LUT6     |   206|
+|10    |RAM32M   |    50|
+|11    |RAM32X1D |    20|
+|12    |FDRE     |  2097|
+|13    |FDSE     |   312|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1601.297 ; gain = 671.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 665 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:51 . Memory (MB): peak = 1601.297 ; gain = 569.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1601.297 ; gain = 671.477
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1601.297 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 554 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1602.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 70 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 50 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 20 instances
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: c9280880
+INFO: [Common 17-83] Releasing license: Synthesis
+90 Infos, 207 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1602.219 ; gain = 1090.410
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1602.219 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/design_1_NN_AXI_0_1_synth_1/design_1_NN_AXI_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_NN_AXI_0_1, cache-ID = 8376d9866cdf9668
+INFO: [Coretcl 2-1174] Renamed 26 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1602.219 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/design_1_NN_AXI_0_1_synth_1/design_1_NN_AXI_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_NN_AXI_0_1_utilization_synth.rpt -pb design_1_NN_AXI_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 12 00:02:55 2024...

@@ -5,7 +5,8 @@ import numpy as np
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
 
-filePath = "./../NN_project/NN_project.sim/"
+#filePath = "./../NN_project/NN_project.sim/"
+filePath = "./"
 def floatTofixed(floatNum, dataWidth, fracBits):
   if (floatNum >= 0):
     return int(floatNum * (2 ** fracBits))
@@ -24,15 +25,17 @@ def param_generator():
   
   for layerNo in range(len(param["size"])):
     for neuronNo in range(param["numNeuron"][layerNo]):
-      f = open(f"{filePath}config/w_{layerNo}_{neuronNo}.cfg", "w")
+      #f = open(f"{filePath}config/w_{layerNo}_{neuronNo}.cfg", "w")
       for value in param["weight"][layerNo][neuronNo]:
-        f.write(f"{bin(floatTofixed(value,32,16))[2:]}\n")
-      f.close()
+        #f.write(f"{hex(floatTofixed(value,32,16))[2:]}\n")
+        print(f"{hex(floatTofixed(value,32,16))[2:]}\n")
+      #f.close()
       
-      f = open(f"{filePath}config/b_{layerNo}_{neuronNo}.cfg", "w")
+      #f = open(f"{filePath}config/b_{layerNo}_{neuronNo}.cfg", "w")
       value = param["bias"][layerNo][neuronNo]
-      f.write(f"{bin(floatTofixed(value,32,16))[2:]}\n")
-      f.close()
+      #f.write(f"{bin(floatTofixed(value,32,16))[2:]}\n")
+      print(f"{hex(floatTofixed(value,32,16))[2:]}\n")
+      #f.close()
   pass
 
 #param_generator()
@@ -43,11 +46,21 @@ def genTestCase():
   test = pd.read_csv(testing_set)
   X_test = test[selected_feature].values
   Y_test = test['label'].values
+  
+  # print(list(map(float,X_test[45])))
+  # print(Y_test[45])
+  num_of_test = 82332
+  float_x_data = [list(map(float, X)) for X in X_test[:num_of_test]]
+  feature_variable = f'float feature[{num_of_test}][13] = {str(float_x_data).replace("[", "{").replace("]", "}")};'
+  expected = f'int expected[{num_of_test}] = {str(list(Y_test[:num_of_test])).replace("[", "{").replace("]", "}")};' 
+  with open("./testfile/testData.h", "w") as file:
+    file.write(f"{feature_variable}\n{expected}")
 
 
-  for i in range(10000):
+  exit()
+  for i in range(100):
     testcase = X_test[i]
-    f = open(f"{filePath}testfile/test_{str(i).zfill(4)}", "w")
+    f = open(f"{filePath}testfile/test_{str(i).zfill(5)}", "w")
     for value in testcase:
       f.write(f"{bin(floatTofixed(value,32,16))[2:]}\n")
     expected = Y_test[i]
