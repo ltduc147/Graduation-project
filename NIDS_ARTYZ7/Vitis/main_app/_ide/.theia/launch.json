@@ -21,7 +21,7 @@
 				"resetSystem": false,
 				"programDevice": false,
 				"resetAPU": false,
-				"bitstreamFile": "${workspaceFolder}\\main_app\\_ide\\bitstream\\design_1_wrapper.bit",
+				"bitstreamFile": "D:\\Graduation_Project\\NIDS_ARTYZ7\\NIDS_ARTYZ7.runs\\impl_1\\design_1_wrapper.bit",
 				"zynqInitialization": {
 					"isFsbl": false,
 					"usingFSBL": {

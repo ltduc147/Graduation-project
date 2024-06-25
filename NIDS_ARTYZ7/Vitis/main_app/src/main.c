@@ -36,7 +36,7 @@
 
 #define NN_INTERRUPT_ID 61 
 #define S2MM_INTERRUPT_ID 62
-#define NUM_OF_TEST 82332 // Max test: 82332
+#define NUM_OF_TEST 22544 // Max test: 82332 // 22544
 
 XAxiDma Dma;
 XAxiDma_Config *Dma_Config;
@@ -45,8 +45,10 @@ XScuGic_Config *pxInterruptControllerConfig;
 u32 status;
 u32 send_status;
 volatile int done = 0;
+volatile int send_done = 0;
 int current_test = 0;
 int current_send = 0;
+u32 feature_fixed[82332][13];
 u32 input_stream[13] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 u32 output_detect[1] = {0};
 XTime start, end;
@@ -62,54 +64,44 @@ u32 float_to_fixed(float float_num, int data_width, int frac_bits);
 
 int main()
 {   
-    
     //init_perfcounters(1,0);
+    for (int i =0; i < 82332; i++){
+        for (int j = 0; j < 13; j++){
+            feature_fixed[i][j] = float_to_fixed(feature[i][j], 32, 16);
+        }
+    }
     dma_config();
     interrupt_config(); 
     Xil_Out32(XPAR_NN_AXI_0_BASEADDR + 0x10, (u32)1); // soft Reset
     Xil_Out32(XPAR_NN_AXI_0_BASEADDR + 0x10, (u32)0); // Clear soft reset
     XTime_SetTime(0);
     NN_config();
-    
-    /*
-    clock_t start_time = clock();
-    
-    printf("Time for configuration: %f ms\n", (double)(clock()-start_time)/CLOCKS_PER_SEC * 1000.0);
-    */
-    /*
-    float feature[2][13] = {{62.0, 252.0, 1.0, 28.336, 45.470398, 0.055856, 0.016526, 62.0, 45.0, 1.0, 1.0, 1.0, 1.0},
-                         {62.0, 252.0, 27.0, 41.690304, 15.751719, 0.030047, 0.058873, 112.0, 1227.0, 1.0, 1.0, 40.0, 1.0}};
-    int expected[3] = {1, 0};
-    */
+    u32 TP = 0, TN = 0, FP = 0, FN = 0; 
 
     Xil_DCacheDisable();
     
-    //Xil_DCacheFlushRange((UINTPTR)output_detect, sizeof(u32));
-    //Xil_DCacheFlushRange((UINTPTR)input_stream, 13*sizeof(u32));
-    XTime_SetTime(0);
+    //XTime_SetTime(0);
+    /*
     for (int j = 0; j < 13; j++){
         input_stream[j] = float_to_fixed(feature[current_test][j], 32, 16);
     }
+    */
     //xil_printf("%d")
-    XTime_GetTime(&start);
+    //XTime_GetTime(&start);
     status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)output_detect, sizeof(u32), XAXIDMA_DEVICE_TO_DMA);
-    status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)input_stream, 13*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
-    if (status != XST_SUCCESS){
-        xil_printf("DMA transerfer fail\n");
-    }
-
-    u32 TP = 0, TN = 0, FP = 0, FN = 0;  
-    ///*
+    status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)feature_fixed[current_send], 13*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
     while (1){
         if (done){
             /*
             if (current_test == 0){
                 XTime_GetTime(&end);
-                printf("Execution time: %f miliseconds\n", (double)(end - start) / COUNTS_PER_SECOND * 1000);
+                printf("Execution time: %f miliseconds\n", (double)(end - start) / COUNTS_PER_SECOND);
             }
             */
             
-            //xil_printf("output detect: %d\n", output_detect[0]);
+            //printf("%d : %d\n", current_test, output_detect[0]);
+
+            
             if (output_detect[0] == 0 && expected[current_test] == 0){
                 TN++;
             } else if (output_detect[0] == 0 && expected[current_test] == 1){
@@ -119,13 +111,16 @@ int main()
             } else {
                 TP++;
             }
+            
             //printf("Test %d. Accuracy: %f, Attack detect: %d, Expected: %d\n",current_test+1,match_expected*100.0/(current_test+1),output_detect[0],expected[current_test]);
             current_test++;
             done = 0;
             //xil_printf("i: %d\n",i);
             
             if (current_test == NUM_OF_TEST) {
+                //XTime_GetTime(&end);
                 printf("--------------------------------------------------------------------\n");
+                //printf("Execution time: %f seconds\n", (double)(end - start) / COUNTS_PER_SECOND);
                 printf("TN: %d, FP: %d, FN: %d, TP:, %d\n", TN,FP,FN,TP);
                 printf("Accuracy: %f \n", (TP+TN)*100.0/(TP+TN+FP+FN));
                 printf("False positive rate(FPR): %f \n", (FP)*100.0/(FP + TN));
@@ -137,64 +132,43 @@ int main()
                 printf("F1 score: %f \n", (2*Precision*Recall)/(Precision + Recall));
                 break;
             };
-            for (int j = 0; j < 13; j++){
-                input_stream[j] = float_to_fixed(feature[current_test][j], 32, 16);
-            }
             
             status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)output_detect, sizeof(u32), XAXIDMA_DEVICE_TO_DMA);
-            status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)input_stream, 13*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
-            if (status != XST_SUCCESS){
-                xil_printf("DMA transerfer fail\n");
-            }
+            status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)feature_fixed[current_test], 13*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
         }
     }
-    //*/
+    
     /*
     while (1){
         if (done){
-            
-            xil_printf("output detect: %d\n", output_detect[0]);
-            if (output_detect[0] == (u32)expected[current_test]){
-                match_expected++;
-            }
             current_test++;
             done = 0;
             if (current_test == NUM_OF_TEST) {
-                printf("Accuracy: %f \n", match_expected*100.0/(current_test));
+                XTime_GetTime(&end);
+                printf("--------------------------------------------------------------------\n");
+                printf("Execution time: %f seconds\n", (double)(end - start) / COUNTS_PER_SECOND);
                 break;
             };
-            status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)output_detect, sizeof(u32), XAXIDMA_DEVICE_TO_DMA);
+            status = XAxiDma_SimpleTransfer(&Dma_2, (UINTPTR)output_detect, sizeof(u32), XAXIDMA_DEVICE_TO_DMA);
             
         }
+
+        if (send_done){
+            send_done = 0;
+            current_send++;
+            if (current_send != NUM_OF_TEST){
+                send_status = XAxiDma_SimpleTransfer(&Dma, (UINTPTR)feature_fixed[current_send], 13*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
+            }
+        }
     }
-    //*/
+    */
     return 0;
 }
 
-
 void NN_ISR(void *CallBackRef){
     XScuGic_Disable(&xInterruptController, NN_INTERRUPT_ID);
-    // Do something
-    xil_printf("NN Interrupt trigger");
-    u32 idle_status;
-    idle_status = (XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x4))&XAXIDMA_IDLE_MASK;
-    while (send_status == 0) {
-        //xil_printf("Not idle");
-        idle_status = (XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x4))&XAXIDMA_IDLE_MASK;        
-    }
-    xil_printf("AXI DMA idle");
-    current_send++;
-    if (current_send != NUM_OF_TEST){
-        for (int j = 0; j < 13; j++){
-            input_stream[j] = float_to_fixed(feature[current_send][j], 32, 16);
-        }
-        status = XAxiDma_SimpleTransfer((XAxiDma *)CallBackRef, (UINTPTR)input_stream, 13*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
-        if (status != XST_FAILURE){
-            xil_printf("Transer success");
-        }
-    }
-
-    XScuGic_Enable(&xInterruptController, NN_INTERRUPT_ID);    
+    send_done = 1;
+    XScuGic_Enable(&xInterruptController, NN_INTERRUPT_ID);
 }
 
 void S2MM_ISR(void *CallBackRef){
@@ -215,13 +189,14 @@ void interrupt_config(){
 
     /*
     XScuGic_SetPriorityTriggerType(&xInterruptController, NN_INTERRUPT_ID, 0xA0, 3);
-    status = XScuGic_Connect(&xInterruptController, NN_INTERRUPT_ID, (Xil_InterruptHandler)NN_ISR , (void *)&Dma);
+    status = XScuGic_Connect(&xInterruptController, NN_INTERRUPT_ID, (Xil_InterruptHandler)NN_ISR , (void *)&Dma_2);
     if (status != XST_SUCCESS) {
         print("Interrupt Connection failed!\n");
     }
     XScuGic_Enable(&xInterruptController, NN_INTERRUPT_ID);
     */
-    XScuGic_SetPriorityTriggerType(&xInterruptController, S2MM_INTERRUPT_ID, 0xA0, 3);
+    XAxiDma_IntrEnable(&Dma, XAXIDMA_IRQ_IOC_MASK, XAXIDMA_DEVICE_TO_DMA);
+    XScuGic_SetPriorityTriggerType(&xInterruptController, S2MM_INTERRUPT_ID, 0xA1, 3);
     status = XScuGic_Connect(&xInterruptController, S2MM_INTERRUPT_ID, (Xil_InterruptHandler)S2MM_ISR , (void *)&Dma);
     if (status != XST_SUCCESS) {
         print("Interrupt Connection failed!\n");
@@ -245,11 +220,11 @@ void dma_config(){
 		xil_printf("No config found for\r\n");
 	}
     status = XAxiDma_CfgInitialize(&Dma, Dma_Config);
+    //status = XAxiDma_CfgInitialize(&Dma_2, Dma_Config);
     if (status != XST_SUCCESS) {
         print("DMA initialization failed!\n");
     }
     print("DMA initialization success..\n");
-    XAxiDma_IntrEnable(&Dma, XAXIDMA_IRQ_IOC_MASK, XAXIDMA_DEVICE_TO_DMA);
 }
 
 u32 float_to_fixed(float float_num, int data_width, int frac_bits) {
@@ -318,7 +293,7 @@ void NN_config(){
     }
     XTime_GetTime(&end);
 
-    //printf("Neural network config time: %f miliseconds\n", (double)(end - start) / COUNTS_PER_SECOND * 1000);
+    //printf("Neural network config time: %f seconds\n", (double)(end - start) / COUNTS_PER_SECOND);
     xil_printf("Neural network config done ...\n\n");
 }
 

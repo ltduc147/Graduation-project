@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Sun May 12 00:02:54 2024
+// Date        : Thu May 30 21:21:53 2024
 // Host        : DESKTOP-M5OR15L running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_NN_AXI_0_1/design_1_NN_AXI_0_1_sim_netlist.v
@@ -4881,7 +4881,7 @@ module design_1_NN_AXI_0_1_S_AXI
   wire \sum_reg[0]_3 ;
   wire \sum_reg[0]_4 ;
   wire \sum_reg[0]_5 ;
-  wire swReset;
+  wire sw_reset;
   wire \waddr_reg[0] ;
   wire \waddr_reg[0]_0 ;
   wire \waddr_reg[0]_1 ;
@@ -5068,7 +5068,7 @@ module design_1_NN_AXI_0_1_S_AXI
        (.I0(\axi_rdata[0]_i_2_n_0 ),
         .I1(sel0[1]),
         .I2(sel0[2]),
-        .I3(swReset),
+        .I3(sw_reset),
         .I4(sel0[0]),
         .O(reg_data_out[0]));
   LUT6 #(
@@ -6952,7 +6952,7 @@ module design_1_NN_AXI_0_1_S_AXI
        (.C(S_AXI_ACLK),
         .CE(slv_control_reg),
         .D(S_AXI_WDATA[0]),
-        .Q(swReset),
+        .Q(sw_reset),
         .R(p_0_in__0));
   FDRE \slv_control_reg_reg[10] 
        (.C(S_AXI_ACLK),
@@ -7813,7 +7813,7 @@ module design_1_NN_AXI_0_1_S_AXI
   LUT2 #(
     .INIT(4'hB)) 
     \waddr[3]_i_1__2 
-       (.I0(swReset),
+       (.I0(sw_reset),
         .I1(S_AXI_ARESETN),
         .O(rst));
   LUT6 #(

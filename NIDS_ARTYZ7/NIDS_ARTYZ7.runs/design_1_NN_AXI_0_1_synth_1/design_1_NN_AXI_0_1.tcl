@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_NN_AXI_0_1_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
@@ -93,15 +95,15 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/S_AXI.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/findOutputMax.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/hidden_layer_1.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/hidden_layer_2.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/config.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/neuron.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/output_layer.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/weight_bram.v
-  D:/Graduation_Project/NN_project/NN_project.srcs/sources_1/new/NN_AXI.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/S_AXI.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/findOutputMax.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/hidden_layer_1.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/hidden_layer_2.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/config.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/neuron.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/output_layer.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/weight_bram.v
+  D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/new/NN_AXI.v
 }
 read_ip -quiet D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/bd/design_1/ip/design_1_NN_AXI_0_1/design_1_NN_AXI_0_1.xci
 

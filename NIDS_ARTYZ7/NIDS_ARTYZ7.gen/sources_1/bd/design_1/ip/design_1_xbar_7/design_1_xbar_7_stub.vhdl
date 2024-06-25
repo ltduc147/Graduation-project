@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Sat May 11 01:42:51 2024
+-- Date        : Sat May 11 01:42:50 2024
 -- Host        : DESKTOP-M5OR15L running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_7/design_1_xbar_7_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_xbar_7 -prefix
+--               design_1_xbar_7_ design_1_xbar_7_stub.vhdl
 -- Design      : design_1_xbar_7
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

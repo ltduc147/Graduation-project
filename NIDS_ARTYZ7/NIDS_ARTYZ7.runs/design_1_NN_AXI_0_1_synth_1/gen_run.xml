@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="design_1_NN_AXI_0_1_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1715446893">
+<GenRun Id="design_1_NN_AXI_0_1_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1717078820">
   <File Type="PA-TCL" Name="design_1_NN_AXI_0_1.tcl"/>
   <File Type="REPORTS-TCL" Name="design_1_NN_AXI_0_1_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_1_NN_AXI_0_1.vds"/>

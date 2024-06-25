@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 489.309 ; gain = 176.344
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 489.148 ; gain = 177.336
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.2/data/ip'.
@@ -30,16 +30,16 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8176
+INFO: [Synth 8-7075] Helper process launched with PID 19228
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1393.598 ; gain = 440.578
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1392.832 ; gain = 440.215
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_NN_AXI_0_1' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_NN_AXI_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_NN_AXI_0_1' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_NN_AXI_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_3' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_axi_dma_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_3' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_axi_dma_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_NN_AXI_0_1' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_NN_AXI_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_NN_AXI_0_1' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_NN_AXI_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_3' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_axi_dma_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_3' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_axi_dma_0_3_stub.v:6]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:263]
 WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'design_1_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:263]
 WARNING: [Synth 8-7071] port 'm_axis_mm2s_tlast' of module 'design_1_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:263]
@@ -47,28 +47,28 @@ WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dm
 WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:263]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:263]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_3' has 64 connections declared, but only 58 given [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:263]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_5' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:599]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_6' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:599]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1891]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1891]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2421]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2421]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2830]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2830]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_8' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_xbar_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_8' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_xbar_8_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_xbar_8' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1162]
-WARNING: [Synth 8-689] width (32) of port connection 's_axi_rdata' does not match port width (64) of module 'design_1_xbar_8' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1179]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_xbar_8' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1180]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_xbar_8' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1182]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_xbar_8' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1183]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_8' is unconnected for instance 'xbar' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1112]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_8' is unconnected for instance 'xbar' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1112]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_8' has 78 connections declared, but only 76 given [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1112]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_5' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:599]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_4' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_processing_system7_0_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_4' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_processing_system7_0_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_9' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_xbar_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_9' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_xbar_9_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_xbar_9' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1162]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_rdata' does not match port width (64) of module 'design_1_xbar_9' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1179]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_xbar_9' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1180]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_xbar_9' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1182]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_xbar_9' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1183]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_9' is unconnected for instance 'xbar' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1112]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_9' is unconnected for instance 'xbar' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1112]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_9' has 78 connections declared, but only 76 given [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1112]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_6' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:599]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_4' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_processing_system7_0_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_4' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_processing_system7_0_4_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_4' is unconnected for instance 'processing_system7_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:398]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_4' is unconnected for instance 'processing_system7_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:398]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_4' is unconnected for instance 'processing_system7_0' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:398]
@@ -82,17 +82,17 @@ INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (0#1) [
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2296]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2296]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2525]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:2525]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_7' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_xbar_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_7' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_xbar_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_7' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_xbar_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_7' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_xbar_7_stub.v:6]
 WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (6) of module 'design_1_xbar_7' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1706]
 WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (6) of module 'design_1_xbar_7' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1710]
 WARNING: [Synth 8-689] width (4) of port connection 'm_axi_wstrb' does not match port width (8) of module 'design_1_xbar_7' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1722]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_2' (0#1) [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:1191]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_2' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_2' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-16624-DESKTOP-M5OR15L/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_2' [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_2' (0#1) [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/.Xil/Vivado-19884-DESKTOP-M5OR15L/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_2' is unconnected for instance 'rst_ps7_0_100M' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:586]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_2' is unconnected for instance 'rst_ps7_0_100M' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:586]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_2' is unconnected for instance 'rst_ps7_0_100M' [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/synth/design_1.v:586]
@@ -206,18 +206,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_5_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1513.250 ; gain = 560.230
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1512.484 ; gain = 559.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1513.250 ; gain = 560.230
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1512.484 ; gain = 559.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1513.250 ; gain = 560.230
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1512.484 ; gain = 559.867
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1513.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1512.484 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -234,31 +234,31 @@ Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd
 Finished Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_3/design_1_axi_dma_0_3/design_1_axi_dma_0_1_in_context.xdc] for cell 'design_1_i/axi_dma_0'
 Finished Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_3/design_1_axi_dma_0_3/design_1_axi_dma_0_1_in_context.xdc] for cell 'design_1_i/axi_dma_0'
-Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_8/design_1_xbar_8/design_1_xbar_2_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
-Finished Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_8/design_1_xbar_8/design_1_xbar_2_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
+Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_9/design_1_xbar_9/design_1_xbar_2_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
+Finished Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_9/design_1_xbar_9/design_1_xbar_2_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
 Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
 Finished Parsing XDC File [d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
 Parsing XDC File [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1532.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1521.371 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1532.691 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1521.371 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -531,15 +531,15 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/s00_c
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -562,25 +562,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -598,37 +598,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -638,7 +638,7 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |      |BlackBox name                   |Instances |
 +------+--------------------------------+----------+
-|1     |design_1_xbar_8                 |         1|
+|1     |design_1_xbar_9                 |         1|
 |2     |design_1_auto_pc_1              |         1|
 |3     |design_1_xbar_7                 |         1|
 |4     |design_1_auto_pc_0              |         1|
@@ -660,25 +660,25 @@ Report Cell Usage:
 |7     |design_1_xbar                 |     2|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1521.371 ; gain = 568.754
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1532.691 ; gain = 560.230
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1532.691 ; gain = 579.672
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1521.371 ; gain = 559.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1521.371 ; gain = 568.754
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1532.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1521.371 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1544.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1542.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Synth Design complete | Checksum: 9384eb5d
+Synth Design complete | Checksum: 5c76fd72
 INFO: [Common 17-83] Releasing license: Synthesis
 62 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.984 ; gain = 1017.023
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1546.684 ; gain = 1014.320
 INFO: [Common 17-1381] The checkpoint 'D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 12 00:03:53 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  6 11:46:15 2024...

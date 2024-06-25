@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Sun May 12 00:02:54 2024
+-- Date        : Thu May 30 21:21:53 2024
 -- Host        : DESKTOP-M5OR15L running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_NN_AXI_0_1/design_1_NN_AXI_0_1_sim_netlist.vhdl
@@ -260,7 +260,7 @@ architecture STRUCTURE of design_1_NN_AXI_0_1_S_AXI is
   signal slv_reg_rden : STD_LOGIC;
   signal slv_reg_wren : STD_LOGIC;
   signal slv_weight_reg : STD_LOGIC;
-  signal swReset : STD_LOGIC;
+  signal sw_reset : STD_LOGIC;
   signal weightValid : STD_LOGIC;
   signal weightValid_i_1_n_0 : STD_LOGIC;
   signal \^wen\ : STD_LOGIC;
@@ -547,7 +547,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => \axi_rdata[0]_i_2_n_0\,
       I1 => sel0(1),
       I2 => sel0(2),
-      I3 => swReset,
+      I3 => sw_reset,
       I4 => sel0(0),
       O => reg_data_out(0)
     );
@@ -3022,7 +3022,7 @@ mem_reg_0_3_0_5_i_9: unisim.vcomponents.LUT4
       C => S_AXI_ACLK,
       CE => slv_control_reg,
       D => S_AXI_WDATA(0),
-      Q => swReset,
+      Q => sw_reset,
       R => \p_0_in__0\
     );
 \slv_control_reg_reg[10]\: unisim.vcomponents.FDRE
@@ -4171,7 +4171,7 @@ mem_reg_0_3_0_5_i_9: unisim.vcomponents.LUT4
       INIT => X"B"
     )
         port map (
-      I0 => swReset,
+      I0 => sw_reset,
       I1 => S_AXI_ARESETN,
       O => \^rst\
     );

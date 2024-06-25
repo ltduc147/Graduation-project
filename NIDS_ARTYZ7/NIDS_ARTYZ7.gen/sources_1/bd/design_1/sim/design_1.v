@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Sun May 12 00:01:28 2024
+//Date        : Thu Jun  6 11:44:01 2024
 //Host        : DESKTOP-M5OR15L running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=1,da_clkrst_cnt=6,da_ps7_cnt=5,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=29,da_board_cnt=1,da_clkrst_cnt=6,da_ps7_cnt=5,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -319,7 +319,7 @@ module design_1
         .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
-  design_1_axi_mem_intercon_5 axi_mem_intercon
+  design_1_axi_mem_intercon_6 axi_mem_intercon
        (.ACLK(processing_system7_0_FCLK_CLK0),
         .ARESETN(rst_ps7_0_100M_peripheral_aresetn),
         .M00_ACLK(processing_system7_0_FCLK_CLK0),
@@ -596,7 +596,7 @@ module design_1
         .dout(xlconcat_0_dout));
 endmodule
 
-module design_1_axi_mem_intercon_5
+module design_1_axi_mem_intercon_6
    (ACLK,
     ARESETN,
     M00_ACLK,
@@ -1109,7 +1109,7 @@ module design_1_axi_mem_intercon_5
         .S_AXI_wready(axi_mem_intercon_to_s01_couplers_WREADY),
         .S_AXI_wstrb(axi_mem_intercon_to_s01_couplers_WSTRB),
         .S_AXI_wvalid(axi_mem_intercon_to_s01_couplers_WVALID));
-  design_1_xbar_8 xbar
+  design_1_xbar_9 xbar
        (.aclk(axi_mem_intercon_ACLK_net),
         .aresetn(axi_mem_intercon_ARESETN_net),
         .m_axi_araddr(xbar_to_m00_couplers_ARADDR),

@@ -23,6 +23,7 @@
       },
       "rst_ps7_0_100M": "",
       "axi_dma_0": "",
+      "xlconcat_0": "",
       "axi_mem_intercon": {
         "xbar": "",
         "s00_couplers": {},
@@ -30,8 +31,7 @@
         "m00_couplers": {
           "auto_pc": ""
         }
-      },
-      "xlconcat_0": ""
+      }
     },
     "interface_ports": {
       "DDR": {
@@ -2806,11 +2806,18 @@
           }
         }
       },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "design_1_xlconcat_0_1",
+        "xci_path": "ip\\design_1_xlconcat_0_1\\design_1_xlconcat_0_1.xci",
+        "inst_hier_path": "xlconcat_0"
+      },
       "axi_mem_intercon": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\design_1_axi_mem_intercon_5\\design_1_axi_mem_intercon_5.xci",
+        "xci_path": "ip\\design_1_axi_mem_intercon_6\\design_1_axi_mem_intercon_6.xci",
         "inst_hier_path": "axi_mem_intercon",
-        "xci_name": "design_1_axi_mem_intercon_5",
+        "xci_name": "design_1_axi_mem_intercon_6",
         "parameters": {
           "NUM_MI": {
             "value": "1"
@@ -2903,8 +2910,8 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "ip_revision": "30",
-            "xci_name": "design_1_xbar_8",
-            "xci_path": "ip\\design_1_xbar_8\\design_1_xbar_8.xci",
+            "xci_name": "design_1_xbar_9",
+            "xci_path": "ip\\design_1_xbar_9\\design_1_xbar_9.xci",
             "inst_hier_path": "axi_mem_intercon/xbar",
             "parameters": {
               "NUM_MI": {
@@ -3213,13 +3220,6 @@
             ]
           }
         }
-      },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "ip_revision": "5",
-        "xci_name": "design_1_xlconcat_0_1",
-        "xci_path": "ip\\design_1_xlconcat_0_1\\design_1_xlconcat_0_1.xci",
-        "inst_hier_path": "xlconcat_0"
       }
     },
     "interface_nets": {
@@ -3308,13 +3308,13 @@
           "axi_dma_0/s_axi_lite_aclk",
           "ps7_0_axi_periph/M01_ACLK",
           "axi_dma_0/m_axi_mm2s_aclk",
-          "axi_mem_intercon/S00_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
-          "axi_mem_intercon/M00_ACLK",
-          "axi_mem_intercon/ACLK",
           "axi_dma_0/m_axi_s2mm_aclk",
-          "axi_mem_intercon/S01_ACLK",
-          "NN_AXI_0/S_AXI_ACLK"
+          "NN_AXI_0/S_AXI_ACLK",
+          "axi_mem_intercon/ACLK",
+          "axi_mem_intercon/S00_ACLK",
+          "axi_mem_intercon/M00_ACLK",
+          "axi_mem_intercon/S01_ACLK"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3331,11 +3331,11 @@
           "ps7_0_axi_periph/ARESETN",
           "axi_dma_0/axi_resetn",
           "ps7_0_axi_periph/M01_ARESETN",
+          "NN_AXI_0/S_AXI_ARESETN",
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
-          "axi_mem_intercon/S01_ARESETN",
-          "NN_AXI_0/S_AXI_ARESETN"
+          "axi_mem_intercon/S01_ARESETN"
         ]
       },
       "xlconcat_0_dout": {

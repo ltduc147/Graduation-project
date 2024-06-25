@@ -70,7 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -99,7 +100,7 @@ set_property used_in_implementation false [get_files -all d:/Graduation_Project/
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_3/design_1_axi_dma_0_3.xdc]
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_3/design_1_axi_dma_0_3_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_3/design_1_axi_dma_0_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_8/design_1_xbar_8_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_9/design_1_xbar_9_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/design_1_ooc.xdc]

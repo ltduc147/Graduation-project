@@ -70,9 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_xbar_7_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -93,7 +93,7 @@ set_property ip_output_repo d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.cache/
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/bd/design_1/ip/design_1_xbar_7/design_1_xbar_7.xci
+read_ip -quiet D:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.srcs/sources_1/bd/design_1/ip/design_1_xbar_7/design_1_xbar_7.xci
 set_property used_in_implementation false [get_files -all d:/Graduation_Project/NIDS_ARTYZ7/NIDS_ARTYZ7.gen/sources_1/bd/design_1/ip/design_1_xbar_7/design_1_xbar_7_ooc.xdc]
 
 OPTRACE "Adding files" END { }

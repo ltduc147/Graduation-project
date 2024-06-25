@@ -1,14 +1,14 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../NIDS_ARTYZ7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../NIDS_ARTYZ7.gen/sources_1/bd/design_1/ipshared/6b2b/hdl" --include "D:/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/NN_AXI.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/S_AXI.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/findOutputMax.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/hidden_layer_1.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/hidden_layer_2.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/neuron.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/output_layer.v" \
-"../../../../../NN_project/NN_project.srcs/sources_1/new/weight_bram.v" \
-"../../../../../NN_project/NN_project.srcs/sim_2/new/NN_AXI_tb.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/NN_AXI.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/S_AXI.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/findOutputMax.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/hidden_layer_1.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/hidden_layer_2.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/neuron.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/output_layer.v" \
+"../../../../NIDS_ARTYZ7.srcs/sources_1/new/weight_bram.v" \
+"../../../../NIDS_ARTYZ7.srcs/sim_1/new/NN_AXI_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
